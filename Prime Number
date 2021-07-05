@@ -1,0 +1,11 @@
+# Python Program to print Prime Numbers from 1 to N  (2 3 5 7 9 . . )
+minimum = int(input(" Please Enter the Minimum Value: "))   #  2
+maximum = int(input(" Please Enter the Maximum Value: "))   #  100
+for Number in range(minimum, maximum + 1):
+    count = 0
+    for i in range(2, Number):                      ##i =2 3 4 5 which add +1 and divide by number
+        if (Number % i == 0):                       ## firsr number is 7 divide by 2 then i increase and again divide number by 3         
+            count = count + 1
+            break                                   ## loop break here and again increasse number for next loop
+        if (count == 0 and Number != 1):
+        print(" %d" % Number, end='  ')
